@@ -1,16 +1,22 @@
-import java.util.Scanner;
+
+import java.util.*;
+import java.util.stream.*;
 
 public class task1 {
     public static void main(String[] args) {
-        int[] numbers = {10, 20, 30, 40, 50};
-
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the index: ");
-        int index = sc.nextInt();
+        int n = sc.nextInt();
 
-        System.out.println("Element at index " + index + " is: " + numbers[index]);
+        List<Integer> salaries = new ArrayList<>();
 
-        sc.close();
+        for (int i = 0; i < n; i++) {
+            salaries.add(sc.nextInt());
+        }
+
+        // Functional programming using Stream and map()
+        salaries.stream()
+                .map(salary -> salary + salary * 10 / 100)
+                .forEach(salary -> System.out.print(salary + " "));
     }
 }
