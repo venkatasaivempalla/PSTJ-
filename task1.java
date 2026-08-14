@@ -17,3 +17,9 @@ public class task1 {
                 .forEach(salary -> System.out.print(salary + " "));
     }
 }
+
+//output
+// 2
+// 200
+// 300
+// 220 330 
